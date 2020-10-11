@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task9</title>
+
+</head>
+<body>
+	<p>Иноземцев Н.С.</p>
+	<canvas id="circle" width="200" height="200"></canvas>
+	<script>
+		let canvasCir = document.getElementById('circle');   
+	    let canvas1 = canvasCir.getContext('2d');
+
+	    canvas1.strokeStyle = "#FF2D00";
+	    canvas1.lineWidth = 3;
+	    canvas1.fillStyle = "#AE00FF"
+
+	    canvas1.beginPath();
+	    canvas1.arc(100,100,99,0,Math.PI*2,false);
+	    canvas1.stroke();     
+	    canvas1.closePath();
+
+	    canvas1.beginPath();
+	    canvas1.arc(100,100,89,0,Math.PI*2,true);
+	    canvas1.fill();     
+	    canvas1.closePath();
+	</script>
+	<canvas id="triangle" width="200" height="200"></canvas>
+	<script>
+		let canvasTri = document.getElementById('triangle');   
+	    let canvas2 = canvasTri.getContext('2d');
+
+	    canvas2.strokeStyle = "#FF2D00";
+	    canvas2.lineWidth = 3;
+	    canvas2.fillStyle = "#AE00FF"
+
+	    canvas2.beginPath();
+        canvas2.moveTo(0, 200);
+        canvas2.lineTo(100,27);
+        canvas2.lineTo(200,200);
+        canvas2.closePath();
+        canvas2.stroke();
+
+        canvas2.beginPath();
+        canvas2.moveTo(20, 190);
+        canvas2.lineTo(100,47);
+        canvas2.lineTo(180,190);
+        canvas2.closePath();
+        canvas2.fill();
+	</script>
+	<canvas id="rectangle" width="200" height="150"></canvas>
+
+    <script> 
+	    let canvasRec = document.getElementById('rectangle');   
+	    let canvas3 = canvasRec.getContext('2d');
+
+	    canvas3.strokeStyle = "#FF2D00";
+	    canvas3.lineWidth = 3;
+	    canvas3.fillStyle = "#AE00FF"
+
+	    canvas3.strokeRect(0, 0, 200, 100);
+	    canvas3.fillRect(10, 10, 180, 80);   
+    </script>
+</body>
+</html>
