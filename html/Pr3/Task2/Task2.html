@@ -89,7 +89,9 @@
 		}
 
 		#rectan {			
-			
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: 100%;
 			height: 100%;
 			border: 2px solid red;
@@ -98,7 +100,7 @@
 
 		#rectan p {
 			text-align: center;
-			float:center;
+			
 		}
 
 		#rectan:after {
@@ -114,6 +116,13 @@
 			height: 20%;
 		}
 		
+		input[type=checkbox]:checked + label {
+        background-color: yellow;
+    }
+
+    .col {
+        background-color: yellow;
+    }
 		
 	</style>
 </head>
@@ -244,7 +253,11 @@
 	    <p><input type="submit" value="Отправить"></p>
     </form>
 
+    
+
     <script type="text/javascript">
+    	let s = "\u2714";
+ 
     	for (var i = 0; i < 2; i++) {
     		let inp = document.getElementsByClassName("line")[i];
 	    	let sp = document.getElementsByClassName("val")[i];
@@ -254,7 +267,8 @@
 			  	sp.textContent = "*";
 			    sp.style.cssText = "color: red";		    
 			  } else {
-			    sp.textContent="ok";
+			  	
+			    sp.textContent = s;
 			    sp.style.cssText = "color: green";
 			  }
 			});
@@ -269,7 +283,7 @@
 		  	sp.textContent = "*";
 		    sp.style.cssText = "color: red";		    
 		  } else {
-		    sp.textContent="ok";
+		    sp.textContent = s ;
 		    sp.style.cssText = "color: green";
 		  }
 		});
@@ -282,7 +296,7 @@
 		  	sp1.textContent = "*";
 		    sp1.style.cssText = "color: red";		    
 		  } else {
-		    sp1.textContent="ok";
+		    sp1.textContent= s;
 		    sp1.style.cssText = "color: green";
 		  }
 		});
@@ -295,6 +309,34 @@
     		<p>Text</p>
     	</div>
     </div>
+
+    <form action="#">
+        
+
+        
+            <input type="checkbox" id="html" name="html">
+        <label for="html">HTML</label>
+       
+        
+<br>
+        
+        <input type="checkbox" id="css" name="css">
+        <label for="css">CSS</label>
+<br>
+        
+        <input type="checkbox" id="js" name="js">
+        <label for="js">JS</label>
+<br>
+        
+        <input type="checkbox" id="u" name="u">
+        <label for="u">U</label><br>
+
+        <input type="submit"  value="Отправить"> 
+              
+       
+
+
+    </form>
 
 
 </body>
