@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task10</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		.top {
+			width: 50%;			
+			margin: 0;
+			padding: 0;
+			background-color: #00bcd4;
+			display: flex;
+			flex-direction: row;			
+		}
+		ul {
+			list-style-type: none;
+		}
+		.top > li {
+			width: 20%;
+			height: 70px;			
+			background-color: #00bcd4;
+			display:table;
+
+		}
+		li {
+			margin: 0;
+			padding: 0;
+		}
+		li:hover {
+			background-color: #4dd0e1;
+		}
+		.sub {
+			background-color: #00bcd4;
+			top: 70px;
+  			left: 20%;
+  			width: 20%;
+  			visibility: hidden;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			transform: scaleY(0);
+			transform-origin: 0 0;
+			transition: .5s;
+		}
+		.sub > li {
+			display:table;
+			text-align-last: left;
+  			height: 70px;
+		}
+		ul li:hover .sub {
+			transform: scaleY(1);
+			visibility: visible;
+		}
+		a {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: block;
+			 border: none;
+			 text-align:center;
+			 vertical-align: middle;
+			 display:table-cell!important;
+			 color:white;
+			 text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+
+
+<nav>
+	<ul class="top">
+		<li>
+			<a href="#">Home</a>
+		</li>
+		<li>
+			<a href="#">About</a>
+		</li>
+		<li>
+			<a href="#">Portfolio</a>
+			<ul class="sub">
+				<li>
+					<a href="#">Web Design</a>
+				</li>
+				<li>
+					<a href="#">Web Development</a>
+				</li>
+				<li>
+					<a href="#">Illustrations</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Blog</a>
+		</li>
+		<li>
+			<a href="#">Contact</a>
+		</li>
+	</ul>
+</nav>
+
+
+</body>
+</html>

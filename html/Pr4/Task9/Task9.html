@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task9</title>
+</head>
+<style type="text/css">
+	.button {
+		width: 200px;
+		height: 50px;
+		border: solid 1px black;
+		border-radius: 30px;		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.button.btn1 {
+		box-shadow: inset 0px 0px 50px red;
+	}
+	.button.btn1:hover {
+		box-shadow: inset 0px 0px 50px #cc0000;
+	}
+	.button.btn2 {
+		background: linear-gradient(to right, red, purple);
+		transition: 1s;
+		color: #FFFFFF;
+	}
+	.button.btn2:hover {
+		background: linear-gradient(to right, #e60000, #660066);
+	}
+	.button.btn3 {
+		color: #FFFFFF;
+		background: linear-gradient(45deg, rgba(35,36,0,1) 0%, rgba(50,207,21,1) 31%, rgba(102,0,255,1) 61%, rgba(255,0,245,1) 88%);
+		transition: 2s;
+	}
+	.button.btn3:hover {
+		background: linear-gradient(45deg, rgba(20,21,0,1) 0%, rgba(35,192,6,1) 31%, rgba(87,0,250,1) 61%, rgba(240,0,230,1) 88%);
+	}
+</style>
+<body>
+
+
+
+<div class="button btn1">
+	Button1
+</div><br>
+<div class="button btn2">
+	Button2
+</div><br>
+<div class="button btn3">
+	Button3
+</div>
+
+<script type="text/javascript">
+	let btn1 = document.getElementsByClassName("button")[0];
+	let btn2 = document.getElementsByClassName("button")[1];
+	let btn3 = document.getElementsByClassName("button")[2];
+	let ygol = 80;
+	btn1.addEventListener('click', function() {
+		btn1.style.cssText = `transform: rotateX(${ygol}deg)`;
+		if(ygol != 0) {		
+			ygol = 0
+		}
+		else {
+			ygol = 80;
+		}
+		
+	});
+	btn2.addEventListener('click', function() {
+		btn2.style.cssText = `transform: rotateX(${ygol}deg)`;
+		if(ygol != 0) {		
+			ygol = 0
+		}
+		else {
+			ygol = 80;
+		}
+		
+	});
+	btn3.addEventListener('click', function() {
+		btn3.style.cssText = `transform: rotateX(${ygol}deg)`;
+		if(ygol != 0) {		
+			ygol = 0
+		}
+		else {
+			ygol = 80;
+		}
+		
+	});
+</script>
+
+</body>
+</html>

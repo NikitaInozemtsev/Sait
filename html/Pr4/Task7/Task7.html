@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task7</title>
+</head>
+
+<style type="text/css">
+	body, html {
+		height: 100%;
+		overflow: hidden;
+	}
+	#widget {
+		width: 50%;
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+	}
+	#upper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	#lower {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	
+	a {
+		background-color: #eceef2;
+		color : #222426;
+		border-radius: 20px;
+		padding: 6px 16px;
+		font-size: 14px;
+		text-decoration: none;
+   		outline: 0;    
+    	touch-action: manipulation;
+    	cursor: pointer;
+    	align-self: center;
+    	margin-left: 8px;
+	}
+	a:hover {
+		background-color: #dfe1e7;
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		width: 10%;
+		height: 100%;
+		padding: 2px;
+	}
+	.item:hover {
+		border: solid 2px gray;
+		padding: 0;
+	}
+	h2 {
+		font-size: 18px;
+		margin: 0;
+		padding: 0;
+		font-family: 'YS Text Web',Helvetica Neue,Arial;
+	}
+
+	.weekend {
+		color:red;
+	}
+	span {
+		font-size: 14px;
+		color: #939cb0;
+		font-family: 'YS Text Web',Helvetica Neue,Arial;
+	}
+</style>
+<body>
+
+
+<div id="widget">
+	<div id="upper">
+		<h1>Прогноз на 10 дней </h1>
+		<a href="https://yandex.ru/pogoda/details?lat=55.682533&lon=37.623493&via=ms">Подробный прогноз на 10 дней</a>
+		<a href="https://yandex.ru/pogoda/month?lat=55.682533&lon=37.623493&via=ms">На месяц</a>
+	</div>
+	<div id="lower">
+		<div class="item">
+			<h2 class="weekend">Сегодня</h2>
+			<span>4 нояб</span>
+			<img src="4nov.svg" width="48px" height="48px">
+			<h2>днем +8&deg;</h2>
+			<span>ночью +7&deg;</span><br>
+			<span>Облачно с прояснениями</span>
+		</div>
+		<div class="item">
+			<h2>Чт</h2>
+			<span>5 нояб</span>
+			<img src="5nov.svg" width="48px" height="48px">
+			<h2>+8&deg;</h2>
+			<span>+6&deg;</span><br>
+			<span>Небольшой дождь</span>
+		</div>
+		<div class="item">
+			<h2>Пт</h2>
+			<span>6 нояб</span>
+			<img src="6nov.svg" width="48px" height="48px">
+			<h2>+9&deg;</h2>
+			<span>+6&deg;</span><br>
+			<span>Небольшой дождь</span>
+		</div>
+		<div class="item">
+			<h2 class="weekend">Сб</h2>
+			<span>7 нояб</span>
+			<img src="6nov.svg" width="48px" height="48px">
+			<h2>+12&deg;</h2>
+			<span>+7&deg;</span><br>
+			<span>Небольшой дождь</span>
+		</div>
+		<div class="item">
+			<h2 class="weekend">Вс</h2>
+			<span>8 нояб</span>
+			<img src="5nov.svg" width="48px" height="48px">
+			<h2>+9&deg;</h2>
+			<span>+3&deg;</span><br>
+			<span>Небольшой дождь</span>
+		</div>
+		<div class="item">
+			<h2>Пн</h2>
+			<span>9 нояб</span>
+			<img src="4nov.svg" width="48px" height="48px">
+			<h2>+5&deg;</h2>
+			<span>0&deg;</span><br>
+			<span>Облачно с прояснениями</span>
+		</div>
+		<div class="item">
+			<h2>Вт</h2>
+			<span>10 нояб</span>
+			<img src="4nov.svg" width="48px" height="48px">
+			<h2>+3&deg;</h2>
+			<span>-1&deg;</span><br>
+			<span>Облачно с прояснениями</span>
+		</div>
+		<div class="item">
+			<h2>Ср</h2>
+			<span>11 нояб</span>
+			<img src="4nov.svg" width="48px" height="48px">
+			<h2>+1&deg;</h2>
+			<span>-1&deg;</span><br>
+			<span>Облачно с прояснениями</span>
+		</div>
+		<div class="item">
+			<h2>Чт</h2>
+			<span>12 нояб</span>
+			<img src="4nov.svg" width="48px" height="48px">
+			<h2>-1&deg;</h2>
+			<span>-1&deg;</span><br>
+			<span>Облачно с прояснениями</span>
+		</div>
+		<div class="item">
+			<h2>Пт</h2>
+			<span>13 нояб</span>
+			<img src="13nov.svg" width="48px" height="48px">
+			<h2>+1&deg;</h2>
+			<span>-1&deg;</span><br>
+			<span>Пасмурно</span>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

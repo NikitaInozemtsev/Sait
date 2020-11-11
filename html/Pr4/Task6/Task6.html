@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task6</title>
+
+	<style type="text/css">
+		
+
+		#diagram {
+			width:  220px;
+			height: 220px;
+			display: flex;
+			flex-direction: row;
+			margin-top: 20px;
+		}
+
+		#col1 {
+			width: 40px;
+			margin-top: 90%;
+			background-color: red;
+			border-right: solid 5px white;
+		}
+
+		#col1:before {
+			content: '10%';
+			position: absolute;
+			transform: translate(0px, -20px);
+		}
+
+		#col2 {
+			width: 40px;
+			margin-top: 75%;
+			background-color: orange;
+			border-right: solid 5px white;
+		}
+
+		#col2:before {
+			content: '25%';
+			position: absolute;
+			transform: translate(0px, -20px);
+		}
+
+		#col3 {
+			width: 40px;
+			margin-top: 50%;
+			background-color: yellow;
+			border-right: solid 5px white;
+		}
+
+		#col3:before {
+			content: '50%';
+			position: absolute;
+			transform: translate(0px, -20px);
+		}
+
+		#col4 {
+			width: 40px;
+			margin-top: 25%;
+			background-color: greenyellow;
+			border-right: solid 5px white;
+		}
+
+		#col4:before {
+			content: '75%';
+			position: absolute;
+			transform: translate(0px, -20px);
+		}
+
+		#col5 {
+			width: 40px;
+			margin-top: 0%;
+			background-color: green;
+		}
+
+		#col5:before {
+			content: '100%';
+			position: absolute;
+			transform: translate(0px, -20px);
+		}
+	</style>
+</head>
+<body>
+
+<div id="diagram">
+	<div id="col1"></div>
+	<div id="col2"></div>
+	<div id="col3"></div>
+	<div id="col4"></div>
+	<div id="col5"></div>
+</div>
+
+
+</body>
+</html>

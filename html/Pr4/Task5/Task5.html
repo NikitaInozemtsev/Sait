@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task5</title>
+	<style type="text/css">
+		span {
+			font-size: 20pt;
+		}
+
+		#num {
+			text-decoration: overline;
+			text-decoration-style: solid;
+			text-decoration-color: black;
+		}
+
+		#num:before {
+			content: '';
+			position: absolute;			
+			width: 7px;
+			border-top: 2px solid black;
+			transform: translate(-7px, -2px);
+
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span>&#8730
+			<span id="num">144235</span>
+		</span>
+	</div>
+
+</body>
+</html>
