@@ -8,7 +8,7 @@
 	<script type="text/javascript">
 		//task 9.1
 		let arr = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
-		alert(arr[1][0]);
+        arr.forEach(a => a.indexOf(4) !== -1 ? alert(a.filter(b => b ===4)) : a);
 		//task 9.2
 		let arr = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
 		alert(arr.js[0]);
