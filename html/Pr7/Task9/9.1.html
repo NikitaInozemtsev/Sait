@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>9.1</title>
+	<style type="text/css">
+		
+		#elem {
+			height: 2000px;
+			width: 100%;
+		}
+		#btn {
+			position: fixed;
+			margin-top: 30px;
+			z-index: 1;
+		}
+	</style>	
+</head>
+<body>
+
+<button id="btn">Кнопка</button>
+
+<div id="elem">
+	asfasdfasdgfasdgasg
+</div>
+
+
+
+<script type="text/javascript">
+	//task 9.1
+	let a = document.getElementById("btn");
+	
+	a.addEventListener("click", function() {		
+		alert(window.pageYOffset);
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.5</title>
+	<style type="text/css">
+		img {
+			opacity: 0;
+		}
+		button	{
+			margin-top: 410px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<img src="https://www.ixbt.com/img/n1/news/2019/5/3/chrome-73-mode-sombre-android_large.jpg" height="400px" style="position: absolute; opacity: 1;" >
+		<img src="https://avatarko.ru/img/kartinka/1/avatarko_anonim.jpg" height="400px" style="position: absolute">
+		<img src="https://i.pinimg.com/originals/f7/0f/82/f70f827e33a61a247663e7aeb282f895.jpg" height="400px" style="position: absolute; opacity: 0;">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-SaYWlXmVicHWYEEpRgrmFir507tWQk3pA&usqp=CAU" height="400px" style="position: absolute ; opacity: 0;">
+		<img src="https://img13.postila.ru/resize?w=600&src=%2Fdata%2F21%2F33%2Fcf%2Fa1%2F2133cfa14b903cd9d0fd64046b2c459bae1458d0bfd4b10c0b18a5941eb25779.jpg" height="400px" style="position: absolute; opacity: 0;">
+	</div>
+
+	<button id="start">start</button>
+
+	<button id="stop">stop</button>
+
+<script type="text/javascript">
+	//task 7.5
+	let imgs = document.getElementsByTagName("img");
+	let n = 1;
+	
+	let start = document.getElementById("start");
+	let st, ts;
+	start.addEventListener("click", function() {
+		st = setInterval(showSlide, 1000);
+		ts = setInterval(next, 1000);
+	});
+
+	let stop = document.getElementById("stop");
+	stop.addEventListener("click", function() {
+		clearInterval(st);
+		clearInterval(ts);
+	});
+
+	
+
+	function next() {
+		n++;
+	}
+
+	function showSlide() {
+		if(n > imgs.length){
+			n = 1;
+		}
+		for(let i = 0; i < imgs.length; i++) {
+			imgs[i].style.opacity = "0";
+		}
+		imgs[n-1].style.opacity = "1";
+	}
+</script>
+
+</body>
+</html>

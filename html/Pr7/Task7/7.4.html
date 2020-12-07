@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.4</title>
+</head>
+<body>
+
+	<div>
+		<img src="https://www.ixbt.com/img/n1/news/2019/5/3/chrome-73-mode-sombre-android_large.jpg" height="400px" style="position: absolute">
+		<img src="https://avatarko.ru/img/kartinka/1/avatarko_anonim.jpg" height="400px" style="position: absolute">
+		<img src="https://i.pinimg.com/originals/f7/0f/82/f70f827e33a61a247663e7aeb282f895.jpg" height="400px" style="position: absolute">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-SaYWlXmVicHWYEEpRgrmFir507tWQk3pA&usqp=CAU" height="400px" style="position: absolute">
+	</div>
+
+<script type="text/javascript">
+	//task 7.4
+	let imgs = document.getElementsByTagName("img");
+	let n = 1;
+
+	setInterval(showSlide, 3000);
+	setInterval(next, 3000);
+
+	function next() {
+		n++;
+	}
+
+	function showSlide() {
+		if(n > imgs.length){
+			n = 1;
+		}
+		for(let i = 0; i < imgs.length; i++) {
+			imgs[i].style.opacity = "0";
+		}
+		imgs[n-1].style.opacity = "1";
+	}
+</script>
+
+</body>
+</html>

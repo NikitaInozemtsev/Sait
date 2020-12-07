@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.2</title>
+</head>
+<body>
+
+
+<button id="btn">Кнопка</button>
+
+<button id="btn2">Кнопка2</button>
+
+<p id="p1"></p>
+
+<script type="text/javascript">
+	//task 7.2
+	let i = 0;
+	let a = document.getElementById("btn");
+	let a2 = document.getElementById("btn2");
+	let time;
+	a.addEventListener("click", function() {
+		time = setInterval(fun, 1000);			
+	});
+	a2.addEventListener("click", function() {
+		clearInterval(time);
+	});
+	function fun() {
+		let b = document.getElementById("p1");
+		b.innerHTML += "<br>" + i;
+		i++;
+	}
+		
+</script>
+
+</body>
+</html>

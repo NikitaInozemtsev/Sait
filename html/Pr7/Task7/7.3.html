@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.3</title>
+</head>
+<body>
+
+<p id="p1"></p>
+
+<script type="text/javascript">
+	//task 7.3
+	let time = setInterval(fun, 1000);
+
+	function fun() {
+		let date = new Date();
+		let a = document.getElementById("p1");
+		a.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	}
+</script>
+
+</body>
+</html>

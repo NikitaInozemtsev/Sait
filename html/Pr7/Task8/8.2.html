@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8.2</title>
+	<style type="text/css">
+		
+		#elem {
+			height: 2000px;
+			width: 100%;
+		}
+		#btn {
+			position: fixed;
+			margin-top: 30px;
+			z-index: 1;
+		}
+	</style>	
+</head>
+<body>
+
+<button id="btn">Кнопка</button>
+
+<div id="elem">
+	asfasdfasdgfasdgasg
+</div>
+
+
+
+<script type="text/javascript">
+	//task 8.2
+	let a = document.getElementById("btn");
+	let b = document.getElementById("elem");
+	a.addEventListener("click", function() {		
+		b.scrollTop = 200;
+	});
+</script>
+
+</body>
+</html>

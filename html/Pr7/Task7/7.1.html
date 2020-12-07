@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.1</title>
+</head>
+<body>
+
+<button id="btn">Кнопка</button>
+
+<p id="p1"></p>
+
+<script type="text/javascript">
+	//task 7.1
+	let i = 0;
+	let a = document.getElementById("btn");
+	a.addEventListener("click", function() {
+		let time = setInterval(fun, 1000);			
+	});
+	function fun() {
+		let b = document.getElementById("p1");
+		b.innerHTML += "<br>" + i;
+		i++;
+	}
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.6</title>
+</head>
+<body>
+
+<p id="p1"></p>
+
+<script type="text/javascript">
+	let fin = {
+	   'year': '2020',
+	   'month': '12',
+	   'day': '03',
+	   'hour': '00',
+	   'min': '00',
+	   'sec': '00'
+	}
+	let a = document.getElementById('p1')
+	function timeLeft(to, from) {
+	   return to - from
+	}
+	int1 = setInterval(function () {
+	   let finDate = new Date(`2020-12-06T00:00:00`);
+	   let left = timeLeft(finDate, new Date());
+	   if (left > 0) {
+	      let leftTime = new Date(left)
+	      a.innerText = `${leftTime.getUTCDate() - 1}/${leftTime.getUTCMonth()}/${leftTime.getUTCFullYear() - 1970} ${leftTime.getUTCHours()}:${leftTime.getUTCMinutes()}:${leftTime.getUTCSeconds()}`
+	   } else {
+	      clearInterval(int1)
+	      alert('Время закончилось')
+	   }
+	}, 1000)
+
+</script>
+
+</body>
+</html>

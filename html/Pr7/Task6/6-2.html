@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task6-2</title>
+</head>
+<body>
+
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+<p>Абзац с текстом</p>
+
+<button id="btn1">Нажми на меня!</button>
+
+<script type="text/javascript">
+	//task 6.2
+	let a = document.getElementById("btn1");
+	a.addEventListener("click", function() {
+		let b = document.getElementsByTagName("p");
+		for(let i = 0; i < b.length; i++) {
+			b[i].innerHTML = i + "." + b[i].innerHTML;
+		}
+	});
+
+</script>
+
+</body>
+</html>
