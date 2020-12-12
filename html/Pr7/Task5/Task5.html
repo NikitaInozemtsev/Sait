@@ -7,7 +7,6 @@
 
 <p id="p1">Какой-то текст</p>
 
-
 <button id="btn1">Кнопка</button>
 
 <input type="text" id="in1" value>
@@ -50,9 +49,8 @@
 	//task 5.3
 	let a = document.getElementById("in3");
 	let b = document.getElementById("p3");
-	a.addEventListener("keyup", function() {
-		a.outerHTML = `<input type="text" id="in3" value="${a.value}">`;
-		b.innerHTML = a.value;
+	a.addEventListener("input", function(e) {		
+		b.innerHTML = e.target.value;
 	});
 	//task 5.4
 	let a1 = document.getElementById("a1");

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>14</title>
+</head>
+<body>
+
+<p> <a id="contents" href="https://ru.wikipedia.org/wiki/">ссылка</a></p>
+
+<script>
+	contents.onclick = function(event) {
+
+	    function handleLink(href) {
+	    	let isLeaving = confirm(`Перейти на ${href}?`);
+	    	if (!isLeaving) return false;
+	    }
+
+	    let target = event.target.closest('a');
+
+	    if (target && contents.contains(target)) {
+	    	return handleLink(target.getAttribute('href'));
+	    }
+    };
+</script>
+	
+</body>
+</html>
