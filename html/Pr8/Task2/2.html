@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2</title>
+</head>
+<body>
+<textarea id="text" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</textarea>
+<button onclick="startAnim(text)">Start animation</button>
+<script>
+  function animate(options) {
+    let start = performance.now()
+    requestAnimationFrame(function animate(time) {
+      let timeFraction = (time - start) / options.duration
+      if (timeFraction > 1) timeFraction = 1
+      let progress = options.timing(timeFraction)
+      options.draw(progress)
+      if (timeFraction < 1) {
+        requestAnimationFrame(animate)
+      }
+    })
+  }
+
+  function startAnim(textArea) {
+    let text = textArea.value
+    let to = text.length,
+      from = 0
+    animate({
+      duration: 20000,
+      timing: bounce,
+      draw: function (progress) {
+        let result = (to - from) * progress + from
+        textArea.value = text.substr(0, Math.ceil(result))
+      }
+    })
+  }
+
+  function bounce(timeFraction) {
+    for (let a = 0, b = 1; true; a += b, b /= 2)
+      if (timeFraction >= (7 - 4 * a) / 11)
+        return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+  }
+</script>
+</body>
+</html>
